@@ -1,51 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
+		
 		<meta charset="utf-8">
-		<title>Board</title>
+		<title>White Space</title>
 		<style>
-		<h1>Refresh page to get clear screen </h1>
+body {
+    background-color: lightblue;
+}
 
-			#container { position: relative; }
-			#whiteboard { border: 1px solid #000; }
-			section {
-				position: absolute;
-				top: 10%;
-			}
-			div {
-				position: static;
-        left: 30%;
-			}
+h1 {
+    color: white;
+    text-align: center;
+     font-size: 40px;
+}
 
+p {
 
-		</style>
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    text-align: center;
+    color: blue;
+}
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}
+</style>
 	</head>
 	<body>
-		<div id="container"align="right">
-			<canvas id="whiteboard" width="720" height="480">
-			</canvas>
+		
+		<h1>Welcome to White Space</h1>
+	<p>White Space provides solutions to daily problems by providing a white board on the computer . </p>
+	<p>You can discuss ideads , brainstorm or even play games on this application . </p>
+	<div class="wrapper">
+	<form action="board.html">
+	<input type="submit" value="Start Drawing !">
+</form>
 		</div>
-		<div class="wrapper">
-
-			<section id="colorSwatch" align="left-top">
-				<input type="radio" name="color" id="color01" data-color="black" size="1" checked><label for="color01"></label>
-				<p>Black</p>
-				<input type="radio" name="color" id="color02" data-color="darkorange" size="1">	<label for="color02"></label>
-				<p>Orange</p>
-				<input type="radio" name="color" id="color03" data-color="navy" size="1">		<label for="color03"></label>
-				<p>Blue</p>
-				<input type="radio" name="color" id="color04" data-color="yellowgreen" size="1">	<label for="color04"></label>
-				<p>Green</p>
-				<input type="radio" name="color" id="color05" data-color="firebrick" size="1">	<label for="color05"></label>
-				<p>Red</p>
-				<input type="radio" name="color" id="eraser" data-color="white" size="4" ><label for="eraser"></label>
-				<p>Eraser</p>
-
-
-			</section>
-	</div>
-
-		<script src="https://cdn.pubnub.com/pubnub-3.15.2.min.js"></script>
-		<script src="board.js"></script>
-	</body>
+		</body>
 </html>
