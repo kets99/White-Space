@@ -1,37 +1,19 @@
-<!DOCTYPE HTML >
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
-	<title> White Space</title>
+		<meta charset="utf-8">
+		<title>White Space</title>
+		<style>
+			#container { position: relative; }
+			#whiteboard { border: 1px solid #000; }
+		</style>
 	</head>
 	<body>
-		<canvas id="whitecanvas"  width="500" height="600" style="border:1px solid #000000;" ></canvas>
-		<script type="text/javascript"  >
-			var pencilImage=new Image(),
-			eraserImage=new Image(),
-			current=0,
-			total=2,
-			init=function(){
-			var c = document.getElementById("whitecanvas");
-			var context = c.getContext("2d");
-			
-			//now first we will load the images , for the colors and brush sizes .. 
-			pencilImage.onload = resourceLoaded;
-			pencilImage.src = "images/pencil.jpeg";
-
-			eraserImage.onload = resourceLoaded;
-			eraserImage.src = "images/eraser.jpeg";
-		}
-			resourceLoaded=function() {
-				current=current+1;
-				if(current==total)
-				{
-					reDraw();
-					createUserEvent();
-
-				}
-			},
-
-
-		</script>
+		<div id="container">
+			<canvas id="whiteboard" width="720" height="480">
+			</canvas>
+		</div>
+		<script src="https://cdn.pubnub.com/pubnub-3.15.2.min.js"></script>
+		<script src="https://mphis.github.io/White-Space/Wspace.js"></script>
 	</body>
-</html>	
+</html>
